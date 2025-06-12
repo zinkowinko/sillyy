@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>im.sillyy.lol - Minecraft Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(135deg, #ff9ff3, #feca57);
+      color: #1e1e2f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ff6b81;
+      padding: 15px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 99;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .navbar a:hover {
+      transform: rotate(-5deg) scale(1.2);
+      color: #ffeaa7;
+    }
+
+    h1 {
+      font-size: 4em;
+      color: #222f3e;
+      text-shadow: 2px 2px #ffffffaa;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.4em;
+      margin-bottom: 25px;
+    }
+
+    .ip-box {
+      background: #48dbfb;
+      padding: 15px 30px;
+      border-radius: 20px;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00d2d3;
+      transition: transform 0.2s ease;
+      margin-bottom: 40px;
+    }
+
+    .ip-box:hover {
+      transform: scale(1.1) rotate(1deg);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #2f3542;
+    }
+
+    .rainbow {
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      animation: wave 2s linear infinite;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+      100% { transform: rotate(-2deg); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .ip-box {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#">🏠 Home</a>
+      <a href="#">🔑 Buy Keys</a>
+      <a href="#">💎 Ranks</a>
+      <a href="#">📦 Crate Shop</a>
+      <a href="#">📞 Discord</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="rainbow">im.sillyy.lol</h1>
+    <div class="subtitle">Welcome to the silliest Minecraft experience alive 🤡</div>
+
+    <div class="ip-box" onclick="copyIP()">im.sillyy.lol</div>
+    <p>(click the IP to copy it like a pro)</p>
+  </main>
+
+  <footer>
+    &copy; 2025 im.sillyy.lol | Built with ❤️ and Redstone Dust
+  </footer>
+
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText("im.sillyy.lol").then(() => {
+        alert("Copied! Paste it in Minecraft and get silly 🎉");
+      });
+    }
+  </script>
+
+</body>
+</html>
